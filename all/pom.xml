@@ -52,7 +52,7 @@
                         <goal>copy-dependencies</goal>
                     </goals>
                     <configuration>
-                        <outputDirectory>${project.basedir}/maven-repo</outputDirectory>
+                        <outputDirectory>${project.basedir}/../jpmcp-m2-repo</outputDirectory>
                         <excludeTransitive>true</excludeTransitive>
                         <useRepositoryLayout>true</useRepositoryLayout>
                         <excludeScope>system</excludeScope>
@@ -237,8 +237,20 @@
             <groupId>com.practice.test1</groupId>
             <artifactId>aem-practicetest1-deployment.all</artifactId>
             <type>zip</type>
-            <version>1.2.14-SNAPSHOT</version>
+            <version>1.2.13-SNAPSHOT</version>
         <scope>provided</scope></dependency>
+        <dependency>
+            <groupId>com.practice.test1</groupId>
+            <artifactId>aem-practicetest1-deployment</artifactId>
+            <version>1.2.13-SNAPSHOT</version>
+            <type>pom</type>
+        </dependency>
+        <dependency>
+            <groupId>com.practice.test2</groupId>
+            <artifactId>aem-practicetest2-deployment.all</artifactId>
+            <type>zip</type>
+            <version>0.0.7-SNAPSHOT</version>
+            <scope>provided</scope></dependency>
         <dependency>
             <groupId>com.practice.main</groupId>
             <artifactId>netcentric-acl-config</artifactId>
@@ -265,7 +277,7 @@
   <repositories>
         <repository>
             <id>local-repo</id>
-            <url>file://${project.basedir}/maven-repo</url>
+            <url>file://${project.basedir}/../jpmcp-m2-repo</url>
             <releases>
                 <enabled>true</enabled>
             </releases>
